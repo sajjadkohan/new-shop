@@ -1,0 +1,16 @@
+.orderBtn{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 23px;
+    padding: 6px 43px;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    width: max-content;
+    background: #f7661e;
+    position: relative;
+    bottom: 10px;
+    
+}
+.orderBtnParrent{padding: 0px 20px;}
+.orderBtn > a{color: #fff!important;}

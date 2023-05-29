@@ -1,0 +1,112 @@
+.loginBox{
+    border-radius: 30px;
+    padding: 20px 30px;
+    max-width: 400px;
+    margin: 80px auto;
+    box-shadow: 0px 0px 47px #0000000f;
+    position: relative;
+    background-color: #fff;
+    transition: 0.4s all;
+    position: relative;
+}
+
+@keyframes changeColor {
+    0%{ 
+        background: rgb(2,227,58);
+        background: linear-gradient(139deg, rgba(2,227,58,1) 40%, rgba(83,255,125,0) 50%, rgba(189,255,185,0) 100%); 
+        
+        background-position: 0px -350px;
+    }
+    50%{
+        background: rgb(2,227,58);
+        background: linear-gradient(139deg, rgba(2,227,58,1) 40%, rgba(83,255,125,0) 50%, rgba(189,255,185,0) 100%); 
+        
+        background-position: 0px -550px;
+        opacity: 0.7;
+    }
+
+    75%{
+        background: rgb(2,227,58);
+        background: linear-gradient(139deg, rgba(2,227,58,1) 40%, rgba(83,255,125,0) 50%, rgba(189,255,185,0) 100%); 
+        
+        background-position: 0px -350px;
+        opacity: 0.5;
+    }
+
+    100%{
+        background: rgb(2,227,58);
+        background: linear-gradient(139deg, rgba(2,227,58,1) 40%, rgba(83,255,125,0) 50%, rgba(189,255,185,0) 100%); 
+        
+        background-position: 0px -30px;
+        opacity: 0;
+    }
+}
+.loginBox::before{
+    content: "";
+    width: 102%;
+    height: 102%;
+    left: -1%;
+    top: -1%;
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    transition: 0.4s all;
+    animation: changeColor 5s 1.1s linear;
+
+    /* background: rgb(2,227,58);
+    background: linear-gradient(139deg, rgba(2,227,58,1) 25%,
+     rgba(83,255,125,0) 50%, rgba(189,255,185,0) 100%);  */
+}
+
+.codeBox .headTitle{text-align: right;font-size: 19px;}
+.headTitle{text-align: center;font-size: 22px;}
+.codeBox .back{
+    position: absolute;
+    left: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: 19px;
+    font-size: 23px;
+    color: #7d7d7d;
+}
+.headTitle span{
+    width: 3px;
+    height: 31px;
+    background-color: #ef4056;
+    display: inline-block;
+    margin: 0px 10px;
+    position: relative;
+    top: 8px;
+    border-radius: 10px;
+}
+.loginBox .desc{text-align: right;font-size: 18px;margin: 33px auto;}
+.loginBox .numberInput {width: 100%;margin: 0px auto;border-radius: 12px;
+    padding: 8px 20px;outline: 1px solid #ccc;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #4c4c4c;
+    border: none;
+    transition: 0.2s all;}
+.loginBox .numberInput:focus{outline: 1px solid #40acef;border: none;}
+.loginBox .enterBtn{margin: 30px auto;width: 100%;background-color: #ef4056;color: #fff;border-radius: 12px;padding: 10px 20px;border: none;cursor: pointer;}
+.loginBox .disabledBtn{opacity: 0.7;cursor: no-drop;}
+.loginBox .enterBtn:hover{background-color: #d9223a;}
+.loginBox .terms{font-size: 12px;text-align: right;}
+.loginBox .terms a{color: #007cff !important;}
+.loginBox .numberInput{-moz-appearance:textfield;}
+.loginBox .numberInput::-webkit-outer-spin-button,.loginBox .numberInput::-webkit-inner-spin-button {-webkit-appearance: none;}
+.loginBox span.errorStyle{color: rgb(175, 0, 0);text-align: center;position: absolute;right: 0px;top: 45px;font-size: 12px;display: block;width: 100%;}
+.loginBox form{position: relative;}
+.loginBox input.errorStyle{outline: 1px solid rgba(175, 0, 0, 0.26);background: #ff000008;}
+
+.parentTimer{width:fit-content;margin: 0px auto 15px auto;text-align: center;direction: rtl;display: flex;justify-content: space-between;}
+.parentTimer p > span{float: right;margin-left: 10px;}
+.parentTimer p{margin: 0px 2px;}
+.resendBtn{border: none;background-color: transparent;color: #007cff;cursor: pointer;}
+
+
+
+

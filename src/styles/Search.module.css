@@ -1,0 +1,20 @@
+.parrentDiv{
+    width: 450px;
+    padding: 5px 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parrentDiv .inputSearch{width: 93%;padding: 0px;border: none;background: none;text-align: right;direction: rtl;}
+.parrentDiv .inputSearch::placeholder{font-size: 13px;color: #999999;}
+.parrentDiv .inputSearch:focus{outline: none;}
+.parrentDiv .inputSearch:focus .parrentDiv{box-shadow: 0px 0px 1px 4px #d2600c8c!important;}
+.dropDown{color: #b4b4b4;display: flex;align-items: center;margin-top: 7px;}
+.iconSearch{position: relative;top: 1px;right: 3px;color: #9a9a9a;}
+@media (max-width:767px) {
+    .parrentDiv .dropDown{display: none;}
+    .parrentDiv{width: 100%;margin-right: 6%;}
+}

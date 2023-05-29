@@ -1,0 +1,140 @@
+.header{
+    width: 100%;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    background: #fff;
+    z-index: 98;
+    box-shadow: 0px 3px 10px #0000000a;
+    padding-bottom: 10px;
+}
+.header .headerTop{
+    width: 100%;
+    padding: 10px;
+}
+.header .container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+.header .dropDown{border-radius: 12px!important;}
+.header .label{text-align: right!important;display: block;}
+.header .label img{width: 23px;}
+.headerTop .container .left{width: 20%;}
+.headerTop .container .logoShop{max-width: 200px;width: 100px;}
+/* .headerTop .container .right .logoDiv {width: 100px;} */
+.headerTop .container .center{width: 50%;}
+.headerTop .container .right{width: 20%;}
+.headerTop .container .icon{font-size: 20px!important;}
+.headerTop .rigth .parrentIcon{padding: 6px;margin: auto 5px;}
+.nav{display: flex;justify-content: space-between;}
+.nav .left{width: 80%;display: flex;}
+.nav .right{width: 20%;text-align: right;}
+.nav .left .ulNav{direction: rtl;margin-left: 140px;margin-left: 192px;margin-bottom: 0px;padding-left: 0px;}
+.nav .left .ulNav .navItem{list-style: none;transition: 0.4s all;position: relative;}
+.nav .left .ulNav .navItem::after{
+    content: "|";
+    width: 2px;
+    height: 100%;
+    color: #dadada6b;
+    position: absolute;
+    left: 0px;
+    top: -10px;
+    font-size: 25px;
+}
+.nav .left .ulNav .navItem:last-child::after{display: none;}
+.nav .left .ulNav .navItem a{padding: 16px 20px;}
+.nav .left .ulNav .navItem a:hover{color: #e96500 !important;}
+.nav .left .parrentCategory{
+    background-color: rgb(247, 102, 30);
+    display: flex;
+    align-items: center;
+    padding: 9px 18px;
+    border-radius: 3px;
+    transition: 0.3s all;
+    color: #fff !important;
+    font-weight: bold;
+    direction: rtl;
+}
+.nav .left .parrentCategory:hover{background-color: rgb(214, 77, 9);}
+.nav .right > div h3{color: #e96500;font-weight: bold;font-size: 15px;margin-bottom: -5px;}
+.nav .right span{font-size: 12px;color: rgba(0, 0, 0, 0.58);}
+.nav .right{display: flex;justify-content: end;}
+.nav .right > div{text-align: center;width: max-content;}
+.header .navParent{width: 100%;padding-left: 10%;padding-right: 10%;}
+.header .navParent .container .left .basketIcon{margin-right: 15px;position: relative;}
+
+.header .navParent .container{padding: 2px 0px;}
+.header .closeBtn{width: 32px;
+background-color: transparent;
+border: 3px solid #00000052;
+border-radius: 100%;
+font-size: 16px;
+padding: 0px;
+height: 32px;
+color: #00000052;}
+
+@keyframes slideDown {
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0%);}
+} 
+.menuIcon{
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+}
+
+
+@media (max-width:767px) {
+.header .container{padding: 0px;flex-wrap: wrap;position: relative;direction: rtl;}
+.header .rigth{width: 20%;justify-content: space-evenly;margin: 10px 0px;}
+.headerTop .container .center{width: 79%;display: flex;justify-content: space-between;order: 1;}
+.headerTop .container .left .logoDiv {width: auto;}
+.headerTop .container .left{width: 20%;order: 1;}
+.nav .left .ulNav{margin-left: 0px;display: block;padding-left: 0px;width: 100%;text-align: center;display: flex;flex-wrap: wrap;justify-content: center;}
+.nav{
+    display: block;position: fixed;
+    width: 51%;bottom: 15%;left: 4%;background: #fff;z-index: 4;transition: 1.5s all;
+    animation: slideDown 0.5s 0.0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0px 0px 63px #00000029;border-radius: 13px;padding: 20px 10px;height: 80%;
+}
+.dNone{display: none!important;}
+.nav .left .parrentCategory{display: none;}
+.nav .left{width: 100%;display: block;}
+.nav .right{display: none;}
+.toggleBtn{width: 55px;
+height: 55px;
+border: none;
+background: #000 url(../../images/four-dots.png) no-repeat center;
+background-size: 50%;
+position: fixed;
+position: fixed;
+bottom: 3%;
+z-index: 999;
+box-shadow: 2px 3px 4px #00000061;
+border-radius: 15%;
+left: 43%;
+}
+
+.nav .left .ulNav .navItem{width: 100%;margin: 2%;padding: 0px;}
+.nav .left .ulNav .navItem a{display: block;width: 100%;border-radius: 13px;}
+.nav .left .loginDiv{
+    border-bottom: 1px solid #3737372e;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0px;
+    color: #373737;
+    padding-top: 0px;
+}
+
+
+}
+
+@media (min-width:767px) {
+    .header .center .toggleBtn{display: none;}
+    .nav .left .loginDiv{display: none;}
+    .backetIconMobile{display: none;}
+}

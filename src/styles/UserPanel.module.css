@@ -1,0 +1,20 @@
+.userPanel{position: relative;}
+.userPanel .itemTab{display: flex;align-items: center;justify-content: end;}
+.userPanel .itemTab .icon{margin-left: 10px;font-size: 17px;}
+.userPanel .itemTab .text{font-size: 15px;}
+.userPanel .panelPage{border: 1px solid #e6e6e6;border-radius: 6px;padding: 10px;max-width: 75%;float: right;}
+.userPanel .panelPage .accountPage{display: flex;direction: rtl;flex-wrap: wrap;}
+.userPanel .panelPage .accountPage .right,.userPanel .panelPage .accountPage .left{width: 50%;}
+.input_panel{
+    border: none;border-bottom: 1px solid #e6e6e6;
+    padding: 12px 5px;width: 80%;transition: 0.4s all;
+    margin: 0px 10% 10px 10%;
+}
+.input_panel:focus{outline: none;border-bottom: 1px solid #2989ff;}
+.saveBtn{border: none;border-radius: 12px;
+    margin: 10px 30px;
+    background: #2989ff;padding: 5px 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+.sliderProduct {margin-bottom: 30px;}
+.sliderProduct .swipperComponent{padding: 20px 10px;}
+.sliderProduct .parrentSlider{width: 100%;}
+.sliderProduct .titleLg{font-size: 30px;margin: 30px auto;font-weight: bold;}
+.sliderProduct .textSection{text-align: right;}
+.sliderProduct .item{border-radius: 15px;box-shadow: 0px 0px 18px #00000017;position: relative;overflow: hidden;}
+.sliderProduct .textSection{padding: 10px;}
+.sliderProduct .textSection .desc{color: #8d8d8d;margin-bottom: 0px;}
+.sliderProduct .textSection .title{font-weight: bold;margin-bottom: 2px;font-size: 17px;}
+.sliderProduct .parrentStars .star{margin: 0 2px;font-size: 14px;color: #adadad;}
+.sliderProduct .parrentStars{margin-top: 3px;}
+.sliderProduct .rateText{margin-right: 7px;color: #8d8d8d;}
+.sliderProduct .parrentCategory {margin-top: 3px;}
+.sliderProduct .parrentCategory .categoryText{margin-right: 7px;color: #8d8d8d;}
+.sliderProduct .parrentBtnOrder {display: flex;justify-content: space-between;margin: 22px 0px 10px 0px;}
+.sliderProduct .parrentBtnOrder .priceTag{font-weight: bold;font-size: 17px;direction: rtl;}
+.sliderProduct .parrentBtnOrder .orderBtn{border: 3px solid #06a00114;background: #d0ffcc;padding: 8px;border-radius: 6px;font-weight: bold;}
+.sliderProduct .parrentImage .discountTag{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    background: #0b96ead6;
+    padding: 5px 13px;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px 1px 3px black;
+    border-radius: 17px 0px 17px 0px;
+  }
+  .sliderProduct .paginationParent{display: flex;align-items: center;}
+  .sliderProduct .paginationParent div{cursor: pointer;border: 2px solid #ccc;border-radius: 100%
+    ;width: 45px;height: 45px;
+    display: flex;justify-content: center;align-items: center;padding: 7px;
+  }
+  .sliderProduct .paginationParent .next{margin: auto 40px ;}
+
+
+
+
+
+
+
+
+
+
+
+

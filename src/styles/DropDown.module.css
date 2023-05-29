@@ -1,0 +1,50 @@
+.dropDown{direction: rtl;cursor: pointer;position: relative;}
+.dropDown .chevron{margin-right: 10px;}
+.dropDown .text{padding: 7px 5px;display: flex;align-items: center;justify-content: center;}
+@keyframes dropAnim {
+    0%{opacity: 0.2;transform: translateY(-10px);}
+    100%{opacity: 1;transform: translateY(0px);}
+}
+.dropDown .content{position: absolute;width: 120%;background: #fff;
+    box-shadow: 1px 8px 13px #0000001c;top: 45px;z-index: 5;border-radius: 2px 2px 5px 5px;
+    animation: dropAnim 0.1s 0.0s linear;
+}
+.dropDown .content ul{padding-right: 0px;margin-bottom: 0px;}
+.dropDown .content li{list-style: none;}
+.dropDown .content li a{display: block;padding: 5px 10px;transition: 0.4s all;}
+.dropDown .content li a:hover{background: #eaeaea8c;}
+
+.dropDown {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

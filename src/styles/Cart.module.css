@@ -1,0 +1,98 @@
+.loadingParent{text-align: center;padding: 10vw;}
+.loadingParent .loadingIcon{font-size: 73px;color: #ea7013;}
+.miniCart{
+    background-color: #fff;
+    border-radius: 12px;position:
+    absolute;top: 149px;
+    box-shadow: 0px 0px 25px rgba(151, 151, 151, 0.43);
+    width: 500px;
+}
+.miniCart .content{
+    overflow: scroll;
+    background-color: #fff;
+    top: 30px;
+    width: 100%;
+    z-index: 2;
+    height: 500px;
+    padding: 0px 10px;
+}
+.miniCart .header{
+    direction: rtl;
+    padding: 20px 15px;
+    font-size: 13px;
+    color: #8e8e8e;
+    width: 100%;
+}
+
+.miniCart .footer{
+    direction: rtl;
+    padding: 10px 15px;
+    font-size: 13px;
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    flex-wrap: wrap;
+}
+.miniCart .footer .priceDiv{width: 50%;margin: 5px 0px;}
+.miniCart .footer .priceDiv .text{color: #8e8e8e;}
+
+.miniCart .footer .orderBtn{
+    background-color: #ef4056;
+    padding: 17px 30px;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s all;
+  }
+  .miniCart .footer .orderBtn:hover{    background-color: #e0344b;}
+
+.miniCart .header .text,.miniCart .header .icon{color:#00baf3;}
+.miniCart .header .icon{margin-right: 5px;position: relative;top: 2px;}
+.topTag{display: flex;justify-content: space-between;width: 100%;direction: rtl;}
+.cartFinal{
+    width: 30%;
+    padding: 15px 20px;
+    background: #fdfdfd;
+    border-radius: 12px;
+    position: sticky;
+    top: 165px;
+    height: max-content;
+    margin-bottom: 20px;
+}
+.cartFinal .header{text-align: right;font-size: 20px;border-bottom: 1px solid #ccc;padding: 10px 0px;}
+.cartFinal .row{font-size: 17px;text-align: right;direction: rtl;margin: 20px auto;}
+.cartFinal .row .totalDiscount{color: #ef4056;}
+.cardItemParent{padding-left: 15px;width: 70%;}
+.stepsParent{width: 100%;}
+.steps{
+    direction: rtl;
+    width: 100%;padding: 50px 30px;
+    border-radius: 12px;
+    margin: 20px auto 15px auto;
+    display: flex;justify-content: space-between;align-items: center;
+}
+.steps .step{display: flex;align-items: center;color: #bebebe;}
+.steps .step .text{font-size: 18px;}
+.steps .step .line{width: 110px;height: 1px;background: #ccc;display: block;margin-right: 20px;}
+.steps .step .icon{margin-left: 10px;font-size: 28px;}
+.steps .active{color: #ef4056;}
+.steps .activeBackground{background: #ef4056!important;}
+.steps .success{color: #ef405761;}
+.steps .successBackground{background: #ef405761!important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+/* html{scroll-behavior: smooth;} */
+/* div{scroll-behavior: smooth;} */
+.page{scroll-behavior: smooth;transition: 0.4s all;background: #f7f7f752;background-size: 100%;padding-bottom: 40px;scroll-behavior: smooth;}
+.productPage{
+    max-width: 1400px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 34px #00000014;
+    margin: 30px auto 0px auto;
+    border-radius: 15px;
+    background-color: #fff;direction: rtl;
+}
+.productPage .textBox{padding-right: 20px;}
+.productPage .imageBox{display: flex;flex-wrap: wrap;}
+.productPage .imageBox .parentimage{margin: 15px;}
+.productPage .imageBox .thunbnainsImages .parentimage {
+    margin: 8px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 7px #0000001a;
+}
+.productPage .imageBox .thunbnainsImages .parentimage img{border-radius: 6px;height: 85px;}
+.productPage .imageBox .parentimage span{overflow: inherit!important;}
+
+.productPage .imageBox .parentimage .imageTag{box-shadow: 0px 0px 15px #0000001f;}
+.productPage .parentimage > div{width: 100%!important;}
+.productPage .categoryDiv{text-align: right;direction: rtl;}
+.vizhegiDiv{text-align: right;direction: rtl;}
+.productPage .title{text-align: right;font-size: 20px;}
+.productPage .icon .circleIcon{
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #b6b6b6;
+    display: inline-block;
+    margin-left: 20px;
+}
+.productPage .categoryDiv{padding-right: 20px;}
+.vizhegiRow{display: flex;direction: rtl;margin-bottom: 20px;}
+.vizhegiParent .content{padding-right: 20px;}
+.vizhegiParent h2{text-align: right;font-weight: 300;font-size: 17px;margin-top: 30px;}
+.vizhegiParent .titleSm{color: #7d7d7d;font-size: 12px;}
+.vizhegiParent .descSm{margin-right: 5px;}
+
+.colorParent .titleDiv{display: flex;}
+.colorParent .titleDiv > h2{direction: ltr;}
+.colorParent .titleDiv .colorSpan{color: #7d7d7d;margin-right: 12px;position: relative;top: 5px;}
+.colorParent {margin-top: 40px;}
+.colorParent .content{padding-right: 20px;}
+.colorDisplay .circle{
+    width: 24px;height: 24px;border-radius: 100%;
+    display: inline-block;background-color: red;margin-left: 20px;
+    border: 2px solid #8b8b8b99;outline-offset: -2px;
+}
+
+.colorDisplay .circle.active{outline: 4px solid #009fff;outline-offset: 1px;}
+.counterParent{margin-top: 40px;}
+.commentsBox{
+    position: relative;
+    margin: 50px 10px 10px 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0px;
+}
+.commentsBox .title{
+    font-size: 16px;
+    border-bottom: 3px solid #ef4056;
+    display: inline-block;
+    padding: 5px;
+}
+.commentsBox > .content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px 10px 10px 10px;
+}
+
+.commentsBox .content .right{width: 25%;position: relative;}
+.commentsBox .content > .left{width: 70%;margin-right: 5%;}
+.commentCard{position: sticky;top: 100px;}
+.RateDisplayParent{display: flex;direction: ltr;width:max-content;}
+.RateDisplayParent .rateValue{margin-left: 10px;line-height: 33px;}
+.RateDisplayParent .svgStar{margin: auto 3px;}
+.commentCard .saveComment {
+    background-color: transparent;
+    border: 2px solid #ef4056;
+    color: #ef4056;
+    border-radius: 12px;
+    padding: 9px 80px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.commentCard .saveComment:hover{    border: 2px solid #ef405794;color: #ef405794;}
+.commentCard .text{margin: 25px auto;}
+.thunbnainsImages{display: flex;justify-content: space-between;}
+.more{width: 100%;position: relative;}
+
+.commentDisplay{max-width: 600px;margin-bottom: 50px;}
+.commentDisplay .header{display: flex;justify-content: space-between;align-items: center;}
+.commentDisplay .header .text {color: #7d7d7d;}
+.commentDisplay .header .right{direction: rtl;}
+.commentDisplay .header .right .icon{float: right;margin-left: 20px;}
+.commentDisplay .header .left .date{color: #7d7d7d;margin-left: 60px;line-height: 35px;}
+.commentDisplay .header .left .rate .svgStar{
+    line-height: 35px;
+    margin-top: 3px;
+    float: left;
+    margin-right: 10px;
+}
+.commentDisplay .content .text {line-height: 30px;}
+.commentDisplay .content{border-bottom: 1px solid #ccc;}
+.modal .textArea{width: 100%;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: right;
+    padding: 10px 15px;
+}
+
+.modal{text-align: center;}
+.modal .textArea:focus{outline: 1px solid #ccc;}
+.modal .saveComment {
+    background-color: #ef4056;
+    border: 2px solid #ef4056;
+    color: #fff;
+    border-radius: 12px;
+    padding: 9px 80px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s all;
+    margin: 30px auto 0px auto;
+    width: 100%;
+}
+.selectTag{width: 300px!important;margin-top: 20px;}
+.modal strong{font-size: 11px;width: 100%;}
+.modal .slider{margin-bottom: 60px;}
+@media (max-width:767px) {
+    
+}
+
+

@@ -1,0 +1,19 @@
+.indexPage{background: #fff;background-size: 100%;}
+.indexPage .contentPage .bannerTop {display: flex;justify-content: space-between;}
+.indexPage .contentPage .bannerTop .left{width: 34%;}
+.indexPage .contentPage .bannerTop .right{width: 100%;}
+.indexPage .contentPage .section2{padding: 60px 0px 0px 0px;display: flex;align-items: center;justify-content: space-between;}
+.indexPage .contentPage .section3{padding: 100px 0px 0px 0px;display: flex;align-items: center;justify-content: space-between;}
+.indexPage .contentPage .section4 .titleLg{font-size: 30px;margin: 30px auto;font-weight: bold;}
+.indexPage .contentPage .section4 .cards{display: flex;}
+.indexPage .contentPage .section4 .cards img{max-height: 330px !important;height: 330px !important;}
+
+@media (max-width:767px) {
+    .indexPage .contentPage .bannerTop {display: block;}
+    .indexPage .contentPage .bannerTop .left{width: 100%;margin: 30px auto;}
+    .indexPage .contentPage .bannerTop .right{width: 100%;}
+    .indexPage .contentPage .section2{padding: 20px 0px 0px 0px;display: block;}
+    .indexPage .contentPage .section4 .cards{display: block;}
+    .indexPage {overflow-x: hidden;}
+
+}

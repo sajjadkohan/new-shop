@@ -1,0 +1,17 @@
+.conectToSeller{
+    background-color: #353535;color: #fff;
+    display: flex;justify-content: space-between;align-items: center;
+    padding: 7px;border-radius: 8px;
+}
+.conectToSeller .icon{
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    color: black;display: flex;align-items: center;justify-content: center;
+}
+.conectToSeller .icon span{font-size: 20px;color: rgb(62, 62, 62);}
+
+
+

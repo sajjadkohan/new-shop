@@ -1,0 +1,14 @@
+.freeDeliveryBox{
+    border: 1px solid #ccccccc4;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #f6f6f6;
+}
+.freeDeliveryBox .left .trackImage{
+    background: url(../../images/delivery-truck.png) center no-repeat;
+    padding: 33px;
+    background-size: 100%;
+    margin-right: 133px;
+}

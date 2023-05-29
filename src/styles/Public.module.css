@@ -1,0 +1,19 @@
+.dFlex{display: flex;}
+.jstBetween{display: flex;justify-content: space-between;align-items: center;}
+.a {color: rgba(0, 0, 0, 0.845);}
+.container{width: 1200px;margin: auto;transition: 0.3s all;}
+.blurStyle{filter: blur(5px);transform: translateX(60%);}
+
+.col2{width: 8.333%;}
+.col3{width: 24.999%;}
+.col4{width: 33.332%;}
+.col5{width: 41.665%;}
+.col6{width: 50%;}
+.col7{width: 58.33%;}
+.col8{width: 66.664%;}
+.col12{width: 100%;}
+.rowNew{display: block;width: 100%;}
+
+@media (max-width:767px) {
+    .container {width: 100%;padding: 0px 10px;}
+}

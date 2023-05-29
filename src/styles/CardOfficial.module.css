@@ -1,0 +1,21 @@
+.cardOfficial{position: relative;width: 31%;}
+.cardOfficial:last-child,.cardOfficial:first-child{padding: 15px;}
+.cardOfficial .image{position: relative;}
+.cardOfficial .image img{border-radius: 25px;}
+.cardOfficial .image .imageUp{position: relative;z-index: 1;max-width: 100%;border-radius: 25px;}
+.cardOfficial .image .backImg{
+    width: 106%;
+    top: -6%;
+    height: 106%;
+    left: -3%;
+    z-index: 0;
+    position: absolute;
+    filter: blur(2px);
+    opacity: 0.3;
+}
+.cardOfficial .textBanner{position: absolute;top: 6%;z-index: 1;width: 100%;padding: 0px 39px;right: 0%;font-size: 26px;color: #fff;text-shadow: 2px 2px 3px black;}
+.cardOfficial .btn1 a{margin-top: 0px;color:#fff!important;margin: 0px 20px;position: relative;bottom: 70px;z-index: 1;}
+
+
+
+

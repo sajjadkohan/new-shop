@@ -1,0 +1,25 @@
+.footer{
+    box-shadow: 0px 0px 23px #00000012;
+    padding: 15px;
+    direction: rtl;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(52, 52, 52);
+    color: #fff;
+}
+.footer .section{width: 20%;text-align: right;padding: 0px 45px;}
+.footer .section.logoParent{width: 40%;}
+.footer .section .title{color: #828282;}
+.footer .section.logoParent .logoDiv{max-height: 125px;display: flex;align-items: center;overflow: hidden;}
+.footer .section.logoParent .logoFooter{
+    max-width: 200px !important;width: auto !important;
+    height: auto !important;min-width: auto !important;
+    min-height: auto !important;margin: auto 0px !important;
+}
+.footer .section ul{
+    padding-right: 0px;
+    margin-top: 30px;
+}
+.footer .section ul li{list-style: none;margin-top: 10px;font-weight: 600;}
+.footer .section.logoParent .desc{color: #828282;}
+
