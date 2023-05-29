@@ -81,7 +81,7 @@ function SimpleMap() {
 >
  
 <div id="mapid">
-  teeeeeest
+  teeest
 </div>
 
 </NeshanMap>
