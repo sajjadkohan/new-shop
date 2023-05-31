@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import styles from '../../../styles/UserPanel.module.css';
 import { Radio, Space, Tabs } from 'antd';
@@ -10,6 +10,8 @@ import { faCoffee,fa6,faHeart,faShoppingBasket,faAddressBook,faUserCircle,faAddr
 import AcountPanel from '@/components/user/AcountPanel';
 import AddressPage from '@/components/smallComponents/AddressPage';
 import Head from 'next/head';
+import { useRouter } from 'next/navigation';
+import { AuthContext } from '../../../context/AuthCtx';
 
 
 
@@ -55,6 +57,12 @@ const items = [
 
 const UserPanel = () => {
 
+  const {isLogin} = useContext(AuthContext);
+  const router = useRouter();
+
+  useEffect(()=> {
+    !isLogin&& router.push('/')
+  },[])
 
   return (
     <div className={styles.userPanel+" "+"userpanel"}>

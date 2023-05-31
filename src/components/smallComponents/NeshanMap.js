@@ -22,7 +22,7 @@ function SimpleMap() {
   });
   const [myState,setMyState] = useState();
 
-  const {setLatLeng} = useContext(UserContext);
+  const {setLatLeng,fullAddress} = useContext(UserContext);
   const {setAddressFn} = useContext(newCartCTX);
 
 
@@ -43,7 +43,7 @@ function SimpleMap() {
             const {city,state,neighbourhood,route_name,place,formatted_address} = response.data;
             let fullAddres = formatted_address || `${state}, ${formatted_address}`;
             setLatLeng(lat,lang,fullAddres);
-            setAddressFn(fullAddres)
+            // setAddressFn(fullAddres)
             // if(!formatted_address){
             //   setAddressFn(`${state}, ${city}, ${neighbourhood}, ${route_name}, ${place}`);
             // } else{

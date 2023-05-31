@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../../styles/Address.module.css';
 import AddressComponent from './AddressComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,16 +9,20 @@ import SimpleMap from './NeshanMap';
 import { useContext } from 'react';
 import { newCartCTX } from '../../context/NewCartCtx';
 import FormAddress from './FormAddress';
-import UserCtx, { UserContext } from '@/context/UserCtx';
+import {UserContext} from '../../context/UserCtx';
 
 
 const AddressPage = () => {
 
-  const {addressState} = useContext(newCartCTX);
-  // const {test} = useContext(UserContext);
+  // const {addressState} = useContext(newCartCTX);
+  const {fullAddress} = useContext(UserContext);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFormModalOpen, setIFormsModalOpen] = useState(false);
+
+  // useEffect(() => {
+  // console.log(fullAddress);
+  // }, [fullAddress])
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -60,9 +64,9 @@ const AddressPage = () => {
             onOk={handleOk} 
             onCancel={handleCancel}>
            <SimpleMap/>
-           <div className={styles.footerModal}>{addressState}</div>
+           <div className={styles.footerModal}>{fullAddress.description}</div>
            {
-            addressState?
+            fullAddress.description?
             <button className='mt10 orderBtn' onClick={handleOk}>تایید و ادامه</button>
             :
             <button className='mt10 orderBtn disabledBtn' disabled>تایید و ادامه</button>

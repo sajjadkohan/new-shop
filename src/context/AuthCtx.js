@@ -19,13 +19,13 @@ const AuthCtx = ({children}) => {
   const [otpCode,setOtpCode] = useState(null);
   const [okLogin,setOkLogin] = useState(false);
   const [timeSecond,setTimeSecond] = useState(60);
-  const [errorState,setErrorState] = useState(true);
-  const [citiesL,setCitiesL] = useState([
-    {
-    key : NaN,
-    value : ""
-    }
-]);
+  // const [errorState,setErrorState] = useState(true);
+  // const [citiesL,setCitiesL] = useState([
+  //   {
+  //   key : NaN,
+  //   value : ""
+  //   }
+  // ]);
 
   const router = useRouter();
 
@@ -58,57 +58,46 @@ const AuthCtx = ({children}) => {
 
   
 
-  const getCity = async (state) => {
-    var strLength = `${state}`.length;
-    console.log(strLength);
-    if(strLength<=2){
-      setErrorState(true)
-    }else{
-      setErrorState(false)
-    }
-    if(strLength>=2){
-      // setErrorState(false)
-      await axios.get(`https://iran-locations-api.vercel.app/api/v1/cities?state=${state}`,{withCredentials : false})
-      .then(async res => {
-        // setCitiesL([
-        //   {
-        //     key : NaN,
-        //     value : ""
-        //   }
-        // ]);
-        // setCitiesL(await res.data.cities);
+  // const getCity = async (state) => {
+  //   var strLength = `${state}`.length;
+  //   console.log(strLength);
+  //   if(strLength<=2){
+  //     setErrorState(true)
+  //   }else{
+  //     setErrorState(false)
+  //   }
+  //   if(strLength>=2){
 
-        
-        if(res.data){
-          setErrorState(false);
-          let newCitiesL = [{ key : NaN, value : "" }];
-          res.data.cities.forEach(item => {
-          newCitiesL.push({
-          key : item.id-1,
-          value : item.name
-          });
-          });
-          setCitiesL(newCitiesL);
-         }else{
-          setErrorState(true)
-         }
+  //     await axios.get(`https://iran-locations-api.vercel.app/api/v1/cities?state=${state}`,{withCredentials : false})
+  //     .then(async res => {
+  //       if(res.data){
+  //         setErrorState(false);
+  //         let newCitiesL = [{ key : NaN, value : "" }];
+  //         res.data.cities.forEach(item => {
+  //         newCitiesL.push({
+  //         key : item.id-1,
+  //         value : item.name
+  //         });
+  //         });
+  //         setCitiesL(newCitiesL);
+  //        }else{
+  //         setErrorState(true)
+  //        }
 
-        // res.data&&alert(JSON.stringify(citiesL));
-        // console.log(res.data);
-        console.log(citiesL);
-      })
-      .catch(err => {
-        console.log(err.message);
-        setErrorState(true);
-      })
-      // await fetch(`https://iran-locations-api.vercel.app/api/v1/cities?state=${state}`)
-      //      .then(response => response.json())
-      //      .then(json => {
-      //          console.log(json)
-      //          setCities(json)
-      //      });
-    }
-   }
+  //       console.log(citiesL);
+  //     })
+  //     .catch(err => {
+  //       console.log(err.message);
+  //       setErrorState(true);
+  //     })
+  //     // await fetch(`https://iran-locations-api.vercel.app/api/v1/cities?state=${state}`)
+  //     //      .then(response => response.json())
+  //     //      .then(json => {
+  //     //          console.log(json)
+  //     //          setCities(json)
+  //     //      });
+  //   }
+  //  }
 
 
   const logOut = () => {
@@ -226,15 +215,15 @@ const AuthCtx = ({children}) => {
       error,
       errorMsg,
       timeSecond,
-      citiesL,
-      errorState,
+      // citiesL,
+      // errorState,
       getOtpCode,
       sendOtpCode,
       userLoged,
       reSendOtp,
       backToMobileField,
       logOut,
-      getCity
+      // getCity
       }}>
     {children}
     </AuthContext.Provider>

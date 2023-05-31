@@ -19,9 +19,9 @@ const NewCartCtx = ({children}) => {
         console.log('test');
     }
 
-    const setAddressFn = (address) => {
-        setAddressState(address);
-    }
+    // const setAddressFn = (address) => {
+    //     setAddressState(address);
+    // }
     
 const getProductById = async(id) =>{
 
@@ -98,7 +98,6 @@ const deleteQuantity = async(data) => {
         addToCart,
         addQuantity,
         deleteQuantity,
-        setAddressFn,
         loading,error,count,addressState}}>
             
         {children}

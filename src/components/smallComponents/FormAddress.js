@@ -1,16 +1,17 @@
 'use client';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import styles from '../../styles/Address.module.css';
 import { AutoComplete } from 'antd';
 import { AuthContext } from '../../context/AuthCtx';
 import { useState } from 'react';
 import { UserContext } from '@/context/UserCtx';
+import { useRouter } from 'next/navigation';
 
 
 const FormAddress = () => {
 
-  const {getCity,citiesL,errorState} = useContext(AuthContext);
-  const {changeValue,changeState} = useContext(UserContext)
+  const {isLogin} = useContext(AuthContext);
+  const {changeValue,changeState,getCity,citiesL,errorState,fullAddress} = useContext(UserContext)
 
   const [stateSt,setStateSt] = useState([
     {
@@ -40,7 +41,7 @@ const FormAddress = () => {
     },
   ]);
 
-  const [fullAddress,setFullAddress] = useState(
+  const [fullAddressSate,setFullAddressSate] = useState(
     {
     cityName :	"",
     ostanName :	"",
@@ -53,6 +54,11 @@ const FormAddress = () => {
     }
     );
 
+    useEffect(() => {
+    changeValue(fullAddressSate)
+    }, [fullAddressSate]);
+
+
   const [stateVal,setStateVal] = useState('');
 
   let cit = null;
@@ -62,12 +68,23 @@ const FormAddress = () => {
       
       <div className={styles.rowC+' '+'row w100'}>
         <span className={styles.title+' '+styles.required}>نشانی پستی</span>
-        <textarea className={styles.inputC+' '+styles.textAreaC} value={'خیابان . . . .'} />
+        <textarea 
+        name='description'
+        defaultValue={fullAddress.description}
+        value={fullAddress.description}
+        onChange={(e) => {changeValue(e)}}
+        className={styles.inputC+' '+styles.textAreaC}
+        />
       </div>
 
       <div className={'row w100 dFlex'}>
         <div className='w50'>
         <span className={styles.title+' '+styles.required}>استان</span>
+        <input hidden name='ostanName' value={fullAddressSate.ostanName} 
+        onChange={(e) => {
+          changeValue(e);
+          setFullAddressSate({...fullAddressSate,[e.target.name] : e.target.value})
+        }} />
         <AutoComplete
             name='ostanName'
             className={styles.inputC1}
@@ -76,12 +93,10 @@ const FormAddress = () => {
             placeholder="استان خود را انتخاب کنید"
             onChange={(e)=> {
               cit=e;
+              setFullAddressSate({...fullAddressSate,ostanName : e})
               getCity(e);
-              console.log(e);
-              // setStateVal(e);
-              // setFullAddress({...fullAddress,ostanName : e});
-              // console.log(fullAddress);
-              // changeValue(e)
+              // changeValue(e);
+              setFullAddressSate({...fullAddressSate,ostanName : e});
             }}
             filterOption={(inputValue, option) =>{
               option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1;
@@ -92,13 +107,18 @@ const FormAddress = () => {
         </div>
         <div className='w50'>
         <span className={styles.title+' '+styles.required}>شهر</span>
+        <input name='cityName' hidden value={fullAddressSate.cityName}        
+        onChange={(e) => {
+          changeValue(e);
+          setFullAddressSate({...fullAddressSate,[e.target.name] : e.target.value})
+        }} /> 
         <AutoComplete
             name='cityName'
             disabled={errorState}
             className={styles.inputC1}
             style={{width:'100%',borderRadius:'12px'}}
             onChange={(e) => {
-              setFullAddress({...fullAddress,cityName : e});
+              setFullAddressSate({...fullAddressSate,cityName : e});
             }}
             options={citiesL}
             placeholder="شهر خود را انتخاب کنید"
@@ -118,9 +138,9 @@ const FormAddress = () => {
         <div className='w50'>
         <span className={styles.title+' '+styles.required}>کد پستی</span>
           <input 
-          onChange={(e) => {
-            setFullAddress({...fullAddress,postalCode : e.target.value});
-          }}
+          name='postalCode'
+          onChange={(e) => {changeValue(e)}}
+          value={fullAddress.postalCode}
           className={styles.inputC} placeholder='کد پستی' />
         </div>
 
