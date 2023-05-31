@@ -1,6 +1,6 @@
 'use client';
 import axios from "axios";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { API_BASE } from "../../constanst";
 
 export const newCartCTX = createContext();
@@ -13,6 +13,7 @@ const NewCartCtx = ({children}) => {
     const [error,setError] = useState('');
     const [count,setCount] = useState(1);
     const [addressState,setAddressState] = useState('');
+
 
     const testF = () => {
         console.log('test');
@@ -82,6 +83,12 @@ const deleteQuantity = async(data) => {
     })
     .catch(err => console.log(err));
 }
+
+// const setLatLengFn = (lat, lng) => {
+//     setLatLangState({lat: lat.toString(), lng: lng.toString()});
+//     console.log('STATE',latLangState);
+// }
+
 
 
   return (

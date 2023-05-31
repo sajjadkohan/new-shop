@@ -1,11 +1,10 @@
 'use client';
-import React, { useState , createContext } from 'react';
+import React, { useState , createContext, useEffect } from 'react';
 
 export const UserContext = createContext();
 
 const UserCtx = ({children}) => {
 
-    const[test,sTest] = useState('1234567890');
     const [fullAddress,setFullAddress] = useState(
         {
         cityName :	"",
@@ -18,7 +17,11 @@ const UserCtx = ({children}) => {
         postalCode :	""
         }
         );
-    const [latState,setLatState] = useState(0);
+        
+
+    useEffect(() => {
+        console.log(fullAddress);
+    }, [fullAddress]);
 
 
     const changeValue = (e) => {
@@ -27,33 +30,16 @@ const UserCtx = ({children}) => {
     }
 
     
-    const changeState = (latt,lang) => {
-        // setFullAddress({...fullAddress,[e.target.name] : e.target.value});
-        // setFullAddress({...fullAddress,lat : latt,lang : lang});
-        console.log('lattt',latt);
-        console.log('LANG',lang);
-        console.log(fullAddress);
-    }
+  
 
-
-
-
-    const setLatLeng = (lat,lng) => {
-        let newLat = lat.toString();
-        let newLang = lng.toString();
-        setLatState(lat);
-        setFullAddress({...fullAddress,lat : newLat,lang : newLang});
-        console.log(newLat,newLang);
-        console.log(fullAddress);
-        console.log(latState);
+    const setLatLeng = (lat,lng,descAddress) => {
+        setFullAddress({...fullAddress,lat : lat.toString(),lang : lng.toString(),description:descAddress});
     }
 
   return (
     <UserContext.Provider value={{
-        test,
         setLatLeng,
         changeValue,
-        changeState,
         }}>
         {children}
     </UserContext.Provider>

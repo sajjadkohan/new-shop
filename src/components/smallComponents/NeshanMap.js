@@ -22,7 +22,7 @@ function SimpleMap() {
   });
   const [myState,setMyState] = useState();
 
-  const {changeState,setLatLeng} = useContext(UserContext);
+  const {setLatLeng} = useContext(UserContext);
   const {setAddressFn} = useContext(newCartCTX);
 
 
@@ -41,11 +41,14 @@ function SimpleMap() {
         })
         .then(async response => {
             const {city,state,neighbourhood,route_name,place,formatted_address} = response.data;
-            if(!formatted_address){
-              setAddressFn(`${state}, ${city}, ${neighbourhood}, ${route_name}, ${place}`);
-            } else{
-              setAddressFn(`${state}, ${formatted_address}`);
-            }
+            let fullAddres = formatted_address || `${state}, ${formatted_address}`;
+            setLatLeng(lat,lang,fullAddres);
+            setAddressFn(fullAddres)
+            // if(!formatted_address){
+            //   setAddressFn(`${state}, ${city}, ${neighbourhood}, ${route_name}, ${place}`);
+            // } else{
+            //   setAddressFn(`${state}, ${formatted_address}`);
+            // }
         })
     }
 
@@ -71,7 +74,7 @@ function SimpleMap() {
       // setLtLg({...ltLg,lat :e.latlng.lat,lng :e.latlng.lng });
       marker.setLatLng(e.latlng);
       getAddress(e.latlng.lat,e.latlng.lng);
-      setLatLeng(e.latlng.lat,e.latlng.lng);
+      // setLatLeng(e.latlng.lat,e.latlng.lng);
       // console.log(ltLg);
 
     });

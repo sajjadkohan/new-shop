@@ -15,7 +15,7 @@ import UserCtx, { UserContext } from '@/context/UserCtx';
 const AddressPage = () => {
 
   const {addressState} = useContext(newCartCTX);
-  const {test} = useContext(UserContext);
+  // const {test} = useContext(UserContext);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFormModalOpen, setIFormsModalOpen] = useState(false);
@@ -46,7 +46,6 @@ const AddressPage = () => {
     <div className={styles.addressPage+' '+'borderC'+' '+'addressPage'}>
       
         <div className={styles.head}>
-          {test}xsz
             <h1 className={styles.title}>آدرس ها</h1>
             <button onClick={showModal} className={styles.addAddress+' '+'dFlex'}>
                 <span className={styles.icon}><FontAwesomeIcon icon={faPlusCircle} /></span>
